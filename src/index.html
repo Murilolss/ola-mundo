@@ -5,7 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projeto Desktop</title>
   </head>
+
   <body>
-    <h1>Herd!</h1>
+    <h1>Hello Word!</h1>
+    <button id="botao">Enviar Mensagem</button>
   </body>
+
+  <script>
+    function handleEnviarMensagem(){
+      window.api.sendMessage('Olá, main!');
+    } 
+
+    const botao = window.document.getElementById("botao");
+    botao.onclick = handleEnviarMensagem;
+    botao.addEventListener('click', handleEnviarMensagem)
+
+  </script>
+  
 </html>
