@@ -8,18 +8,13 @@
 
   <body>
     <h1>Hello Word!</h1>
-    <button id="botao">Enviar Mensagem</button>
+    <button id="btn">Enviar Mensagem</button>
   </body>
 
   <script>
-    function handleEnviarMensagem(){
-      window.api.sendMessage('Olá, main!');
-    } 
-
-    const botao = window.document.getElementById("botao");
-    botao.onclick = handleEnviarMensagem;
-    botao.addEventListener('click', handleEnviarMensagem)
-
+       function handleClick() {
+    window.api.sendMessage('Olá, main!');
+    }
+    document.getElementById('btn').addEventListener('click', handleClick);
   </script>
-  
 </html>

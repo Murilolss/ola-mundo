@@ -1,15 +1,20 @@
-import { app, BrowserWindow } from 'electron';
-const { ipcMain } = require('electron');
-
+import { app, BrowserWindow, ipcMain } from 'electron';
+import path from 'path';
 
 function createWindow() {
- const win = new BrowserWindow({
- width: 800,
- height: 600,
- webPreferences:{
-    preload: './dist/preload.js'
- }
- });
- win.loadFile('./src/index.html');
+  const win = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      preload: path.join(__dirname, '/preload.js'),
+    },
+  });
+  win.loadFile('./src/index.html');
+  win.webContents.openDevTools();
 }
+
+ipcMain.on('message', function (event, data) {
+  console.log('Mensagem recebida:', data);
+});
+
 app.whenReady().then(createWindow);
