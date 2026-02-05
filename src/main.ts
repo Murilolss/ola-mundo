@@ -9,8 +9,9 @@ function createWindow() {
       preload: path.join(__dirname, '/preload.js'),
     },
   });
-  win.loadFile('./src/index.html');
-  win.webContents.openDevTools();
+//   win.loadFile('./src/index.html');
+//   win.webContents.openDevTools();
+win.loadURL('http://localhost:5173');
 }
 
 ipcMain.on('message', function (event, data) {
