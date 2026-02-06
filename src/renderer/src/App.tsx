@@ -1,15 +1,11 @@
 import './App.css'
+import Chat from './components/chat';
 
 function App() {
 
-  function handleClick() {
-   window.api.sendMessage('Olá do Renderer Process!');
-  }
-
   return (
     <>
-      <h1>Hello World!</h1>
-      <button onClick={handleClick}>Enviar Mensagem</button>
+      <Chat />
     </>
   )
 }
