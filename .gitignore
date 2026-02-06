@@ -5,9 +5,6 @@ dist
 
 /generated/prisma
 
-package-lock.json
-package.json
-
 /prisma
 db
 dev.db

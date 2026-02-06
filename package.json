@@ -1,0 +1,28 @@
+{
+  "name": "ola-mundo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tsc -p tsconfig.electron.json --watch",
+    "dev": "electronmon .",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/electron": "^1.4.38",
+    "@types/node": "^25.2.0",
+    "concurrently": "^9.2.1",
+    "electron": "^40.1.0",
+    "electronmon": "^2.0.4",
+    "prettier": "^3.8.1",
+    "typescript": "^5.9.3"
+  }
+}

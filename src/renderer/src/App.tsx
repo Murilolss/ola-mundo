@@ -3,13 +3,13 @@ import './App.css'
 function App() {
 
   function handleClick() {
-    alert('Botão clicado!');
+   window.api.sendMessage('Olá do Renderer Process!');
   }
 
   return (
     <>
       <h1>Hello World!</h1>
-      <button id="btn" onClick={handleClick}>Enviar Mensagem</button>
+      <button onClick={handleClick}>Enviar Mensagem</button>
     </>
   )
 }
