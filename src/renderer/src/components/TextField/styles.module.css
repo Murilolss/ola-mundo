@@ -1,0 +1,14 @@
+.containerp {
+ display: flex;
+ gap: 10px;
+ padding: 12px;
+}
+
+.input {
+ width: 100%;
+ padding: 10px 12px;
+ border-radius: 8px;
+ border: none;
+ outline: none;
+ font-size: 14px;
+}

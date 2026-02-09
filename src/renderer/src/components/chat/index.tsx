@@ -1,6 +1,17 @@
+import { useState } from "react";
 import styles from "./styles.module.css";
+import TxtField from "../TextField";
+import Btn from "../Btn";
  
 export default function Chat() {
+ 
+  const [texto, setTexto] = useState("");
+ 
+  function enviar(){
+    window.api.sendMessage(texto);
+    setTexto("");
+  }
+ 
   return (
     <div className={styles.chatContainer}>
      
@@ -9,17 +20,11 @@ export default function Chat() {
  
       </div>
  
-      <div className={styles.inputArea}>
-        <input
-          type="text"
-          placeholder="Digite sua mensagem..."
-          className={styles.input}
-        />
-        <button className={styles.sendButton}>Enviar</button>
+      <div className={styles.area}>
+        <TxtField type="text" value={texto} onChange={setTexto} />
+        <Btn onClick={enviar} />
       </div>
  
     </div>
   );
 }
- 
- 

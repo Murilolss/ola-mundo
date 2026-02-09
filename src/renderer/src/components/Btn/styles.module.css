@@ -1,0 +1,14 @@
+.sendButton {
+  padding: 0 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+}
+ 
+.sendButton:hover {
+  background-color: #1d4ed8;
+}
