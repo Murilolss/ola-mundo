@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './styles.module.css';
 import TxtField from '../TextField';
 import Btn from '../Btn';
-import type { Message } from '../../../shared/models/Message.js';
+import type { Message } from '../../../../shared/models/Message';
 
 export default function Chat() {
  const [texto, setTexto] = useState('');
@@ -11,9 +11,8 @@ export default function Chat() {
  async function handleSend() {
   const newMessages = await window.api.postMessage(texto);
   setMessages((prev) => prev.concat(newMessages));
-  setTexto("");
+  setTexto('');
  }
-
 
  //   function enviar(){
  //     window.api.sendMessage(texto);
